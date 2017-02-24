@@ -1,0 +1,7 @@
+- name: Playbook to setup local development system
+  hosts: localhost
+  connection: local
+  become_user: root
+  become: true
+  roles:
+    - dev
