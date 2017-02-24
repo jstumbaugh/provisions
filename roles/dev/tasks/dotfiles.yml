@@ -107,6 +107,10 @@
         src=/home/{{ user }}/.dotfiles/irbrc
         state=link
 
+- name: Create config/nvim
+  file: path=/home/{{ user }}/.config/nvim
+        state=directory
+
 - name: Symlink nvimrc
   file: path=/home/{{ user }}/.config/nvim/init.vim
         src=/home/{{ user }}/.dotfiles/vimrc
