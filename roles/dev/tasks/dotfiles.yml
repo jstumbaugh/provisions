@@ -11,76 +11,91 @@
   file: path=/home/{{ user }}/.agignore
         src=/home/{{ user }}/.dotfiles/agignore
         state=link
+  ignore_errors: yes
 
 - name: Symlink bash
   file: path=/home/{{ user }}/.bash
         src=/home/{{ user }}/.dotfiles/bash
         state=link
+  ignore_errors: yes
 
 - name: Symlink bash_profile
   file: path=/home/{{ user }}/.bash_profile
         src=/home/{{ user }}/.dotfiles/bash_profile
         state=link
+  ignore_errors: yes
 
 - name: Symlink bashrc
   file: path=/home/{{ user }}/.bashrc
         src=/home/{{ user }}/.dotfiles/bashrc
         state=link
+  ignore_errors: yes
 
 - name: Symlink bin
   file: path=/home/{{ user }}/.bin
         src=/home/{{ user }}/.dotfiles/bin
         state=link
+  ignore_errors: yes
 
 - name: Symlink compton.conf
   file: path=/home/{{ user }}/.compton.conf
         src=/home/{{ user }}/.dotfiles/compton.conf
         state=link
+  ignore_errors: yes
 
 - name: Symlink dircolors
   file: path=/home/{{ user }}/.dircolors
         src=/home/{{ user }}/.dotfiles/dircolors
         state=link
+  ignore_errors: yes
 
 - name: Symlink dircolors-256
   file: path=/home/{{ user }}/.dircolors-256
         src=/home/{{ user }}/.dotfiles/dircolors-256
         state=link
+  ignore_errors: yes
 
 - name: Symlink dircolors.ansi-universal
   file: path=/home/{{ user }}/.dircolors.ansi-universal
         src=/home/{{ user }}/.dotfiles/dircolors.ansi-universal
         state=link
+  ignore_errors: yes
 
 - name: Symlink fish
   file: path=/home/{{ user }}/.config/fish
         src=/home/{{ user }}/.dotfiles/config/fish
         state=link
+  ignore_errors: yes
 
 - name: Symlink fonts
   file: path=/home/{{ user }}/.config/fonts
         src=/home/{{ user }}/.dotfiles/config/fonts
         state=link
+  ignore_errors: yes
 
 - name: Symlink gemrc
   file: path=/home/{{ user }}/.gemrc
         src=/home/{{ user }}/.dotfiles/gemrc
         state=link
+  ignore_errors: yes
 
 - name: Symlink gitignore
   file: path=/home/{{ user }}/.gitignore
         src=/home/{{ user }}/.dotfiles/gitignore
         state=link
+  ignore_errors: yes
 
 - name: Symlink git_template
   file: path=/home/{{ user }}/.git_template
         src=/home/{{ user }}/.dotfiles/git_template
         state=link
+  ignore_errors: yes
 
 - name: Symlink i3
   file: path=/home/{{ user }}/.i3
         src=/home/{{ user }}/.dotfiles/i3
         state=link
+  ignore_errors: yes
 
 - name: Symlink i3status.conf
   file: path=/home/{{ user }}/.i3status.conf
@@ -101,29 +116,35 @@
   file: path=/home/{{ user }}/.config/nvim/vim
         src=/home/{{ user }}/.dotfiles/vim
         state=link
+  ignore_errors: yes
 
 - name: Symlink rspec
   file: path=/home/{{ user }}/.rspec
         src=/home/{{ user }}/.dotfiles/rspec
         state=link
+  ignore_errors: yes
 
 - name: Symlink screenrc
   file: path=/home/{{ user }}/.screenrc
         src=/home/{{ user }}/.dotfiles/screenrc
         state=link
+  ignore_errors: yes
 
 - name: Symlink vimrc
   file: path=/home/{{ user }}/.vimrc
         src=/home/{{ user }}/.dotfiles/vimrc
         state=link
+  ignore_errors: yes
 
 - name: Symlink vim
   file: path=/home/{{ user }}/.vim
         src=/home/{{ user }}/.dotfiles/vim
         state=link
+  ignore_errors: yes
 
 - name: Symlink tmux.conf
   file: path=/home/{{ user }}/.tmux.conf
         src=/home/{{ user }}/.dotfiles/tmux.conf
         state=link
+  ignore_errors: yes
 
