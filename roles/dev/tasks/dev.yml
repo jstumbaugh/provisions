@@ -10,6 +10,7 @@
     - vim
     - virtualbox
 
+# Ruby
 - name: Ruby Packages
   apt: name={{ item }} state=present
   with_items:
@@ -18,8 +19,52 @@
     - ruby
     - ruby-dev
 
+- name: Gems enhancing IRB
+  action: gem name={{ item }} state=latest
+  with_items:
+    - awesome_print
+    - looksee
+    - interactive_editor
+    # - hirb
+
+- name: Other Useful Rubygems
+  action: gem name={{ item }} state=latest
+  with_items:
+    - bundler
+    - reek
+
+# Neovim
 - name: Add neovim PPA repository
   apt_repository: repo='ppa:neovim-ppa/unstable'
 
 - name: Install Neovim
   apt: name=neovim
+
+# R
+- name: Add CRAN GPG key
+  tags: R
+  apt_key: id=0xE084DAB9 keyserver=keyserver.ubuntu.com
+
+- name: Add CRAN repository
+  tags: R
+  apt_repository: repo='deb http://cran.rstudio.com/bin/linux/ubuntu {{ ansible_distribution_release }}/'
+
+- name: Install R
+  tags: R
+  apt: name=r-base state=latest
+
+# RStudio
+- name: RStudio downloading version {{ rstudio_version }}
+  tags: rstudio
+  get_url: url=https://download1.rstudio.org/rstudio-{{ rstudio_version }}.deb
+    dest=/opt/rstudio-{{ rstudio_version }}.deb
+    validate_certs=no
+
+- name: Install RStudio
+  tags: rstudio
+  apt: deb=/opt/rstudio-{{ rstudio_version }}.deb
+
+# Fish shell
+- name: Set fish to the default shell
+  tags: fish
+  command: chsh -s /usr/bin/fish

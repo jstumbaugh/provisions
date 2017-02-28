@@ -3,5 +3,7 @@
   connection: local
   become_user: root
   become: true
+  vars:
+    rstudio_version: 0.99.484-amd64
   roles:
     - dev
