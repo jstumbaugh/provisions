@@ -152,3 +152,10 @@
         state=link
   ignore_errors: yes
 
+- name: Install vim-plug plugin manager
+  get_url:
+    url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    dest: ~/.vim/autoload/plug.vim
+
+- name: Install vim plugins
+  shell: vim +PlugInstall +qall
