@@ -6,7 +6,7 @@ Instructions
 ------------
 1. Change the username in `roles/dev/vars/main.yml` to your username
 2. Install Ansible: `sudo apt install ansible`
-3. Run the plays: `sudo ansible-playbook dev.yml`
+3. Run the plays: `sudo ansible-playbook playbook_name`
 
 Plays
 ---------
