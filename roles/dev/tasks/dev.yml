@@ -1,6 +1,6 @@
 ---
 - name: Update everything first
-- apt:
+  apt:
     update_cache: yes
 
 - name: Everday Packages
