@@ -37,39 +37,9 @@
         state=link
   ignore_errors: yes
 
-- name: Symlink compton.conf
-  file: path=/home/{{ user }}/.compton.conf
-        src=/home/{{ user }}/.dotfiles/compton.conf
-        state=link
-  ignore_errors: yes
-
-- name: Symlink dircolors
-  file: path=/home/{{ user }}/.dircolors
-        src=/home/{{ user }}/.dotfiles/dircolors
-        state=link
-  ignore_errors: yes
-
-- name: Symlink dircolors-256
-  file: path=/home/{{ user }}/.dircolors-256
-        src=/home/{{ user }}/.dotfiles/dircolors-256
-        state=link
-  ignore_errors: yes
-
-- name: Symlink dircolors.ansi-universal
-  file: path=/home/{{ user }}/.dircolors.ansi-universal
-        src=/home/{{ user }}/.dotfiles/dircolors.ansi-universal
-        state=link
-  ignore_errors: yes
-
 - name: Symlink fish
   file: path=/home/{{ user }}/.config/fish
         src=/home/{{ user }}/.dotfiles/config/fish
-        state=link
-  ignore_errors: yes
-
-- name: Symlink fonts
-  file: path=/home/{{ user }}/.config/fonts
-        src=/home/{{ user }}/.dotfiles/config/fonts
         state=link
   ignore_errors: yes
 
@@ -90,17 +60,6 @@
         src=/home/{{ user }}/.dotfiles/git_template
         state=link
   ignore_errors: yes
-
-- name: Symlink i3
-  file: path=/home/{{ user }}/.i3
-        src=/home/{{ user }}/.dotfiles/i3
-        state=link
-  ignore_errors: yes
-
-- name: Symlink i3status.conf
-  file: path=/home/{{ user }}/.i3status.conf
-        src=/home/{{ user }}/.dotfiles/i3status.conf
-        state=link
 
 - name: Symlink irbrc
   file: path=/home/{{ user }}/.irbrc
@@ -128,12 +87,6 @@
         state=link
   ignore_errors: yes
 
-- name: Symlink screenrc
-  file: path=/home/{{ user }}/.screenrc
-        src=/home/{{ user }}/.dotfiles/screenrc
-        state=link
-  ignore_errors: yes
-
 - name: Symlink vimrc
   file: path=/home/{{ user }}/.vimrc
         src=/home/{{ user }}/.dotfiles/vimrc
@@ -156,6 +109,3 @@
   get_url:
     url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     dest: ~/.vim/autoload/plug.vim
-
-- name: Install vim plugins
-  shell: vim +PlugInstall +qall
