@@ -91,6 +91,6 @@
   git: repo=https://github.com/Bash-it/bash-it.git
        dest=/home/{{ user }}/.bash_it
 
-- name: Install Broadcast Copy
-  tags: bcp
-  shell: bash -c "mkdir /tmp/bcp && cd /tmp/bcp && curl -L# https://github.com/jgallen23/bcp/archive/master.tar.gz | tar zx --strip 1 && make install"
+# - name: Install Broadcast Copy
+#   tags: bcp
+#   shell: bash -c "mkdir /tmp/bcp && cd /tmp/bcp && curl -L# https://github.com/jgallen23/bcp/archive/master.tar.gz | tar zx --strip 1 && make install"
