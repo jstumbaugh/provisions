@@ -42,13 +42,12 @@
     - awesome_print
     - looksee
     - interactive_editor
-    # - hirb
 
 - name: Other Useful Rubygems
   action: gem name={{ item }} state=latest
   with_items:
     - bundler
-    # - reek
+    - reek
 
 # Neovim
 - name: Add neovim PPA repository
