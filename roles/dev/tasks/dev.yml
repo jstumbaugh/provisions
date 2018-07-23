@@ -9,6 +9,8 @@
     - curl
     - fish
     - git
+    - glances
+    - htop
     - lolcat
     - openssh-server
     - openssl
